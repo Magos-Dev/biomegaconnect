@@ -8,6 +8,16 @@ waToggle.addEventListener("click", function () {
   waToggle.setAttribute("aria-expanded", open ? "true" : "false");
 });
 
+// ===== Wi-Fi: mostra o QR code =====
+var wifiGroup = document.getElementById("wifiGroup");
+var wifiToggle = document.getElementById("wifiToggle");
+
+wifiToggle.addEventListener("click", function () {
+  var open = !wifiGroup.classList.contains("is-open");
+  wifiGroup.classList.toggle("is-open", open);
+  wifiToggle.setAttribute("aria-expanded", open ? "true" : "false");
+});
+
 // ===== Pino do Maps: mostra as duas lojas =====
 var stores = document.querySelector(".stores");
 var pinToggle = document.getElementById("pinToggle");
